@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,30 +9,34 @@
     <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
     <section class="form1">
-    <h2>Contact form</h2>
-    <p>Contact us for custome quote</p>
-    <div>
+        <h2>Contact Form</h2>
         <form class="container">
-            <label for="username">UserName:</label><br>
-            <input type="text" id="username" placeholder="username"><br>
+            <label for="firstname">FirstName:</label><br>
+            <input type="text" class="input" placeholder="FirstName"><br>
+            <label for="lastname">LastName:</label><br>
+            <input type="text" class="input" placeholder="LastName"><br>
             <label for="username">Email:</label><br>
-            <input type="email" id="username" placeholder="Email ID" required><br>
-            <label for="number">Contact No:</label><br>
-            <input type="number" id="number" placeholder="Contact number optinal!" optinal><br>
-            <label for="text">Website: </label><br>
-            <input type="number" id="number" placeholder="Web site optinal!" ><br>
+            <input type="email" class="input" placeholder="Email" required><br>
+            <label for="tel">Contact No:</label><br>
+            <input type="tel" class="input" id="phone" placeholder="0123456789" pattern="[0-9]{10}" required><br>
+            <label for="text">City:</label><br>
+            <input type="text" class="input" placeholder="City"><br>
             <label for="name">Message:</label><br>
-            <input type="text"  placeholder="Message....." style="height:200px"><br>
+            <input type="text" class="input" placeholder="Message....." style="height:200px"><br>
+            <button onclick="myFunction()">SUBMIT</button>
         </form>
-        <input type="submit"></input>
-    </div>
     </section>
-    <header>
-        <p>
-            This Form contacting a best form
-        </p>
-    </header>
+    <footer class="footer">
+        <p>@2016 Simple Contact Form.All Rights Reserved</p>
+    </footer>
+    <script>
+        function myFunction() {
+            alert("Form Successfully submitted!");
+        }
+    </script>
 </body>
+
 </html>

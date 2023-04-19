@@ -13,30 +13,48 @@
 <body>
     <section class="form1">
         <h2>Contact Form</h2>
-        <form class="container">
-            <label for="firstname">FirstName:</label><br>
-            <input type="text" class="input" placeholder="FirstName"><br>
-            <label for="lastname">LastName:</label><br>
-            <input type="text" class="input" placeholder="LastName"><br>
-            <label for="username">Email:</label><br>
-            <input type="email" class="input" placeholder="Email" required><br>
-            <label for="tel">Contact No:</label><br>
-            <input type="tel" class="input" id="phone" placeholder="0123456789" pattern="[0-9]{10}" required><br>
-            <label for="text">City:</label><br>
-            <input type="text" class="input" placeholder="City"><br>
-            <label for="name">Message:</label><br>
-            <input type="text" class="input" placeholder="Message....." style="height:200px"><br>
-            <button onclick="myFunction()">SUBMIT</button>
+        <form class="container" action="index.html" method="post" onsubmit="return validate()">
+            <div>
+                <label for="firstname">FirstName:</label>
+                <input type="text" class="input" placeholder="FirstName" id="firstname">
+                <span id="fname" class="text-danger font-weight-bold"></span>
+            </div>
+            <div>
+                <label for="lastname">LastName:</label>
+                <input type="text" class="input" placeholder="LastName" id="lastname">
+                <span id="lname" class="text-danger font-weight-bold"></span>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" class="input" placeholder="Email" id="email">
+                <span id="emailid" class="text-danger font-weight-bold"></span>
+            </div>
+            <div>
+                <label for="tel">Contact No:</label>
+                <input type="tel" class="input" id="phone" placeholder="ContactNo" id="contactNo">
+                <span id="contact" class="text-danger font-weight-bold"></span>
+            </div>
+            <div>
+                <label for="text">City:</label>
+                <input type="text" class="input" placeholder="City" id="city">
+                <span id="city" class="text-danger font-weight-bold"></span>
+            </div>
+            <div>
+                <label for="name">Message:</label>
+                <input type="text" class="input" placeholder="Message....." style="height:100px">
+            </div>
+            <input type="submit" id="btn" class="btn btn-sm btn-danger"></input>
         </form>
     </section>
     <footer class="footer">
-        <p>@2016 Simple Contact Form.All Rights Reserved</p>
+        <p>@2023 Simple Contact Form.All Rights Reserved</p>
     </footer>
     <script>
         function myFunction() {
             alert("Form Successfully submitted!");
         }
     </script>
+    <script type="text/javascript" src="index.js"></script>
 </body>
 
 </html>
